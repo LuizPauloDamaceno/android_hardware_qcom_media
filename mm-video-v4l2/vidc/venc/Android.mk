@@ -127,6 +127,7 @@ endif
 # 			Make the Shared library (libOmxVenc)
 # ---------------------------------------------------------------------------------
 
+ifneq ($(QCPATH),)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE                    := libOmxVenc
@@ -181,6 +182,7 @@ LOCAL_SRC_FILES   := src/omx_video_base.cpp
 LOCAL_SRC_FILES   += src/omx_swvenc_mpeg4.cpp
 
 include $(BUILD_SHARED_LIBRARY)
+endif # QCPATH
 endif
 
 
